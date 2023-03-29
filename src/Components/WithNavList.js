@@ -21,7 +21,7 @@ const withNavList = Component => {
                     </li>
                 ) : <li>No list</li>;
             setNavList(items);
-        },[]);
+        },[navItems]);
 
          return (
              <Component {...props} nav={{ items: navList, id: navId}}/>
