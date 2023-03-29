@@ -1,0 +1,24 @@
+@import '../base/default.scss';
+/*Header*/
+header{
+    .Logo{
+        padding: 20px;
+        background-color: $brave-pink;
+
+        div.Wrapper{
+            display: flex;
+        }
+
+        img{
+            height: 60px;
+            width: 60px;
+            margin-right: 20px;
+        }
+
+        h4{
+            width: 300px;
+            align-self: center;
+        }
+    }
+
+}

@@ -1,0 +1,21 @@
+@import '../base/default.scss';
+
+section#Welcome{
+    margin-top: 20px;
+    height: 50vh;
+    background:url(../../../public/img/rugby_cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1{
+        color: $mild-white;
+        background: $mild-black-transparent;
+        line-height: 2em;
+    }
+
+    article{
+        background: $mild-white;
+        padding: 20px;
+        width: 800px;
+    }
+}

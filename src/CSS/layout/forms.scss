@@ -1,0 +1,131 @@
+@import '../base/default.scss';
+
+aside#Contact{
+    header{
+        height: 30vh;
+        background:url(../../../public/img/contact.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        h1{
+            color: #fff;
+            padding: 40px 100px;
+            background: $mild-black-transparent;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    section#ContactAddress{
+        .ContactDetails{
+            height: 10vh;
+            margin: 0 auto;
+            background-color: $brave-pink;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .ContactPoint{
+            margin: 0 auto;
+            background-color: $mild-white;
+            border-left: 590px solid transparent;
+            border-right: 590px solid transparent;
+            border-top: 100px solid $brave-pink;
+        }
+
+    }
+    
+    input{
+        width: 35%;
+    }
+
+} 
+  
+
+form#ContactForm{
+    margin: 40px auto;
+
+    label{
+        width: 100px;
+        display: inline-block;
+        text-align: right;
+        margin-right: 10px;
+
+        &.Left{
+            text-align: left;
+        }
+    }
+
+    .Alert{
+        margin: 20px auto;
+        width: 800px;
+        background-color: lightgray;
+        color: $red;
+        padding: 20px;
+
+        li{
+            padding-bottom: 10px;
+        }
+    }
+
+}
+
+section#Subscription{
+    padding: 20px 40px;
+    margin-bottom: 20px;
+
+    input{
+        width: 28%;
+        margin-right: 20px;
+    }
+
+    select{
+        width: 20%;
+    }
+
+    #alert-sub{
+        color: $red;
+    }
+
+    button{
+        padding: 10px;
+        margin: 10px 0;
+        background-color: $brave-pink-transparent;
+        border: 1px $brave-pink solid;
+        border-radius: 5px;
+        &:hover{
+            cursor: pointer;
+            background-color: $brave-pink;
+        }
+    }
+}
+  
+
+  
+  input,
+  select{
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  select[name="category"]{
+    width: calc(100% - 180px);
+  }
+  
+  label{
+    padding: 10px 0;
+  }
+  
+  textarea{
+    margin: 10px 0;
+    width: calc(100% - 100px);
+    resize: vertical;
+    padding:15px;
+    border-radius:15px;
+    height:150px;
+  }
+  
+  input[type="submit"]{
+    float: right;
+  }

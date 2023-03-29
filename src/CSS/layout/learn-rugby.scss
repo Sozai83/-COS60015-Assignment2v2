@@ -1,0 +1,21 @@
+section#LearnRugby{
+    .RuleCard{
+        margin-top: 40px;
+
+        article{
+            display:flex;
+            padding: 20px 0;
+
+            div{
+                align-self: center;
+                width: 100%;
+                margin-right: 20px;
+            }
+
+            figure{
+                align-self: center;
+                width: 80%;
+              }
+        }
+    }
+} 

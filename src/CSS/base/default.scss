@@ -1,0 +1,119 @@
+
+@import ".././variables";
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: $mild-white;
+    color: $mild-black;
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+    color: $mild-black;
+  }
+  
+  a:hover{
+    color: $brave-pink;
+  }
+  
+  address{
+    font-style: normal;
+  }
+  
+  h1{
+    padding: 20px 0;
+    font-size: 3.2em; 
+  }
+   
+  h2{
+   font-size: 2em;
+   padding-bottom: 20px;
+  }
+   
+  h3{
+   font-size: 1.5em;
+   padding-bottom: 20px;
+  }
+  
+  h1, h2,h3{
+    line-height: 1em;
+  }
+  
+  p{
+    padding-bottom: 10px;
+  }
+  
+  input{
+    font-size: 16px;
+  }
+  
+  .Wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .Hidden{
+    display:none;
+  }
+  
+  i.Credit{
+    text-align: right;
+    float: right;
+    font-size: 12px;
+  }
+
+  section#Welcome,
+  section#Teams,
+  section#LearnRugby,
+  section.MatchWrap,
+  aside#Contact{
+    padding: 40px;
+  }
+
+  /*Privacy policy and T&C*/
+.privacy-policy{
+  margin: 40px auto;
+}
+
+/*iframe Styling*/
+
+.gmapCanvas {
+  overflow:hidden;
+  background:none!important;
+  height:300px;
+  width:400px;
+}
+
+iframe{
+  border: none;
+  margin: 0;
+}
+
+button.AlertReset{
+  padding: 10px;
+  border: 1px $brave-pink solid;
+  border-radius: 5px;
+  background-color: $brave-pink-transparent;
+  margin: 10px 0;
+  
+  &:hover{
+    cursor: pointer;
+    background-color: $brave-pink;
+  }
+}

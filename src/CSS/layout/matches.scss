@@ -1,0 +1,131 @@
+@import '../base/default.scss';
+
+section.MatchCard{
+    font-size: 24px;
+    padding: 40px 0;
+    border-bottom: 5px $brave-pink solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0 auto;
+
+    table,
+    .Highlight,
+    .Map{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .Highlight{
+        max-width: 400px;
+        font-size: 20px;
+        img{
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+
+    .Map{
+        font-size: 16px;
+        max-width: 400px;
+        iframe{
+            width: 100%;
+            max-width: 400px;
+        }
+
+        address{
+            padding-top: 10px;
+            font-size: 1rem;
+        }
+
+        h4{
+            font-size: 20px;
+        }
+    } 
+
+    table{
+        border-collapse: collapse;
+        text-align: center;
+        height: 60px;
+
+        h4{
+            font-size: 20px;
+        }
+
+        tr{
+            height: 40px;
+
+            &.MatchTitle{
+                height: 120px;
+            }
+
+            &.Match{
+                height: 100px;
+            }
+
+            &.MatchTeams{
+                width: 80px;
+                height: 80px;
+
+                img.Team{
+                    width: 80px;
+                    height: 80px;
+                }
+
+                td{
+                    display: flex;
+                    justify-content: center;
+    
+                    .Teams{
+                        padding: 0 10px;
+                        align-self: center;
+                    }
+                      
+                }
+            } 
+        }
+    }
+}
+
+section.MatchCard{
+
+    table{
+        .match_title{
+            th{
+                padding-bottom: 10px;
+            }    
+        }
+
+        .Result td{
+            height: 42px;
+            font-size: 42px;
+        }
+    }
+
+    .match_schedule table{
+        width: 100%;
+    }
+
+    .BuyTicket{
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+    .Button{ 
+        padding:10px 40px;
+        width: 100%;
+        background-color: $brave-pink;
+        border:$mild-black 2px solid;
+        border-radius: 10px;
+        text-align: center;
+
+        &:hover{
+            cursor: pointer;
+            background-color: $mild-white;
+        }
+    }
+} 
+
+  

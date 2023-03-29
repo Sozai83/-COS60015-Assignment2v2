@@ -1,0 +1,69 @@
+@import '../base/default.scss';
+
+#TopNav{
+    margin:0 auto;
+    padding: 40px 0px 20px 0px;
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+
+        li{
+            cursor: pointer;
+            padding-bottom: 10px;
+            text-align: center;
+            width: 150px;
+            position: relative;
+            font-weight: bold;
+
+            &:after{
+                position: absolute;
+                left: 50%;
+                content: '';
+                height: 3px;
+                background: $brave-pink;
+                transition: all 0.5s linear;
+                width: 0;
+                bottom: -3px;
+            }
+
+            &:hover:after,
+            &.Active:after{
+                width: 100%;
+                left: 0px;
+            }
+        }
+    }      
+  }
+  
+  #SecondNav,
+  section#LearnRugby nav,
+  aside#Matches nav{
+    margin: 20px 0 40px 0;
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+
+        li{
+            cursor: pointer;
+            padding-bottom: 10px;
+            text-align: center;
+            width: 150px;
+            position: relative;
+            font-weight: bold;
+            flex-grow: 1;
+            padding: 20px 0;
+            background-color: $brave-pink-transparent;
+
+            &:hover,
+            &.Active{
+                background-color: $brave-pink;
+            }
+        }
+    }
+  }
+  
+  
+  
+  

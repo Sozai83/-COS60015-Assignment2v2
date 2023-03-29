@@ -1,0 +1,118 @@
+@import '../base/default.scss';
+
+section#TeamDetails{
+    padding: 20px;
+    background: $mild-white;
+    border: 1px $mild-black solid;
+    margin: 10vh auto;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 1120px;
+    position: relative;
+    transition: all 5s ease;
+
+    figure{
+        img{
+            padding-right: 20px;
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+        }
+
+        figcaption{
+            padding-right: 20px;
+            text-align: center;
+        }
+    }
+
+    #News {
+        figure{
+            width: 25%;
+        }
+
+        img{
+            height: 160px;
+            width: calc(100% - 40px);
+        }
+    }
+
+    .Bio{
+        min-width: 500px;
+        width: 40%;
+        border-collapse: collapse;
+        padding: 10px;
+        text-align: center;
+
+        table{
+            margin: 10px auto;
+            width: 400px;
+            border: 1px $mild-black solid;
+            th,td{
+                padding: 10px;
+                border: 1px $mild-black solid;
+            }
+        }
+    }
+
+    article{
+        align-self: center;
+
+        .SMS{
+            margin: 0 auto;
+
+            i:hover{
+                cursor: pointer;
+                color: $brave-pink;
+            }
+        }
+
+        .fa-brands{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            font-size: 40px;
+            color:$mild-black;
+        }
+          
+    }
+
+    .Close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 60px;
+        font-weight: bold;
+        text-decoration: none;
+        color: $mild-black;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+            color: $brave-pink;
+        }
+      }
+}
+  
+  /*Team member details popup*/
+  
+//   section#team-details section.bio 
+//   section#team-details section.bio table,
+//   section#team-details section.bio th,
+//   section#team-details section.bio td{
+//     border: #000 1px solid;
+//     border-collapse: collapse;
+//     padding: 10px;
+//     text-align: center;
+//   }
+  
+  .Overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $mild-black-transparent;
+    z-index: 100;
+  }

@@ -1,0 +1,104 @@
+@import '../base/default.scss';
+
+section#Teams{
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    div#TeamMembers,
+    figure#News,
+    .Details,
+    .Match_card{
+        display: flex;
+        padding-bottom: 20px;
+    } 
+
+    h2{
+        padding-top: 20px;
+    }
+
+    .TeamsTop img{
+        width: 100%;
+    }
+
+    .About{
+        padding: 20px 0;
+    }
+
+    #TeamMembersWrapper{
+        position: relative;
+
+        button{
+            &.slick-prev {
+                left: -40px;
+            }
+
+            &.slick-arrow:before{
+                width: 36px;
+                font-size: 36px;
+                cursor: pointer;
+                opacity: 1;
+                color: $red-transparent03;
+            }
+            &:hover{
+                &.slick-arrow:before{
+                    color:  $red-transparent06;
+                }
+            }
+    
+            
+        }
+
+        span{
+            font-size: 36px;
+            position: absolute;
+            top: calc(50% - 36px);
+            left: 15px;
+        }
+
+        .slick-dots{
+            button{
+                &:before{
+                    color: $red-transparent06;
+                    font-size: 14px;
+                }
+            }
+            
+        }
+    }
+    #TeamMembers{
+        width: 1200px;
+        height: 200px;
+        opacity: 1;
+
+        &::-webkit-scrollbar{
+            width: 0;
+            display: none;
+        }
+
+        figure{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 160px;
+            padding: 0 12px;
+
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 160px;
+                height: 170px;
+
+                &:hover{
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
+            }
+
+            figcaption{
+                text-align: center;
+            }
+        }
+    }    
+}
+
+  
