@@ -8,23 +8,23 @@ const ContactForm = (props) => {
   const [emailValidation, setEmailValidation] = useState(true);
 
   useEffect(()=>{
-    const regexEmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+    const regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/;
     if(email.length > 0){
       setEmailValidation(regexEmail.test(email));
     }
-  }, [email, emailValidation]);
+  }, [email]);
   
   const [phone, setPhone] = useState('');
   const [phoneValidation, setPhoneValidation] = useState(true);
 
   useEffect(()=>{
-    const regexPhone = /^d{10}$/;
+    const regexPhone = /^\d{10}$/;
     if (phone.length > 0){
       setPhoneValidation(regexPhone.test(phone));
     }else{
       setPhoneValidation(true);
     }
-  }, [phone, phoneValidation]);
+  }, [phone]);
 
   const [category, setCategory] = useState('otherGeneralQueries');
   const [message, setMessage] = useState('');

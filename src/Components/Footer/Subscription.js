@@ -6,7 +6,7 @@ const Subscription = ({onSubmit}) => {
     const [emailValidation, setEmailValidation] = useState(true);
   
     useEffect(()=>{
-      const regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/;
+    const regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/;
       if(email.length > 0){
         setEmailValidation(regexEmail.test(email));
       }else{
