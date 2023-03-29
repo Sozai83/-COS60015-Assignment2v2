@@ -4,6 +4,7 @@ import '../CSS/layout/navigation.scss';
 const withNavList = Component => {
     const NewComponent = ({navItems, navId, selectNav, id, ...props})=>{
         const [navList, setNavList] = useState(null);
+       
         //Convert navItems to navList JSX
         useEffect(()=> {
             const selectEl = (event)=>{
@@ -21,7 +22,7 @@ const withNavList = Component => {
                     </li>
                 ) : <li>No list</li>;
             setNavList(items);
-        }, []);
+        }, [navItems,props.default,selectNav]);
 
          return (
              <Component {...props} nav={{ items: navList, id: navId}}/>
