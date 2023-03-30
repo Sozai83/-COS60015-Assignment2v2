@@ -60,8 +60,7 @@ const ContactForm = (props) => {
 
   return (
     <form id="ContactForm" onSubmit={submitHandler}>
-      { (!emailValidation || !phoneValidation || missingMandatory.length > 0) && (
-      <div id="Alert" className="Alert">
+      <div id="Alert" className="Alert" data-testid="alert">
         <ul id="AlertList">
           {!emailValidation && (
             <li key="email">Please enter valid email adress.</li>
@@ -74,12 +73,12 @@ const ContactForm = (props) => {
           )}
         </ul>
       </div>
-      )}
       <p>Field with * is mandatory.</p>
       <label htmlFor="fname">First Name*: </label>
       <input
         id="fname"
         name="fname"
+        data-testid="fname"
         aria-label="fname"
         type="text"
         placeholder="First name"
@@ -89,6 +88,7 @@ const ContactForm = (props) => {
       <input
         id="lname"
         name="lname"
+        data-testid="lname"
         aria-label="lname"
         type="text"
         placeholder="Last name"
@@ -98,6 +98,7 @@ const ContactForm = (props) => {
       <input
         id="email"
         name="email"
+        data-testid="email"
         aria-label="contact-email"
         type="contact-email"
         placeholder="abc@braveblossom.com"
@@ -106,6 +107,7 @@ const ContactForm = (props) => {
       <label htmlFor="phone">Phone: </label>
       <input id="phone"
       name="phone"
+      data-testid="phone"
       aria-label="phone"
       type="phone"
       placeholder="0123456789"
@@ -151,6 +153,7 @@ const ContactForm = (props) => {
       <textarea
         id="query"
         name="query"
+        data-testid="query"
         aria-label="query"
         type="text"
         onChange={ (event)=> setMessage(event.target.value)}

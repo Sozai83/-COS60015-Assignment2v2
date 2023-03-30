@@ -3,7 +3,7 @@ import '../../CSS/layout/forms.scss'
 
 const Subscription = ({onSubmit}) => {
     const [email, setEmail] = useState('');
-    const [emailValidation, setEmailValidation] = useState(true);
+    const [emailValidation, setEmailValidation] = useState(false);
   
     useEffect(()=>{
     const regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;

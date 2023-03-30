@@ -59,10 +59,13 @@ form#ContactForm{
 
     .Alert{
         margin: 20px auto;
-        width: 800px;
-        background-color: lightgray;
+        width: 800px;     
         color: $red;
-        padding: 20px;
+
+        .AlertList{
+            background-color: lightgray;
+            padding: 20px;
+        }
 
         li{
             padding-bottom: 10px;
