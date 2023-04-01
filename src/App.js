@@ -8,7 +8,8 @@ import Footer from "./Components/Footer/Footer";
 import {selectEl, changeActive} from './utils'
 import {ErrorBoundary} from 'react-error-boundary'
 
-function GeneralErrorFallbackComponent({error, resetErrorBoundary}) {
+//Error boundary when something goes wrong
+function GeneralErrorFallbackComponent({error}) {
   return (
     <div role="alert">
       <p>Something went wrong:</p>
@@ -21,18 +22,22 @@ function GeneralErrorFallbackComponent({error, resetErrorBoundary}) {
 function App() {
 	const navItems = ["Matches", "Home", "Contact"];
 	const navId = "TopNav"
+	// Saves previous selected navigation item
 	let prevStatus = useRef(null);
-	const [selectedComponent, setSelectedComponent] = useState('Home');
+	// Saves selected navigation item
+	const [selectednav, setselectednav] = useState('Home');
+	// Callback function to set selected navigation item
 	const selectNav = (event) => {
-		selectEl(event, setSelectedComponent, 'Home');
+		selectEl(event, setselectednav, 'Home');
 	};
 
+	//When selected navigation item changes 
 	useEffect(()=>{
-		if(prevStatus.current && prevStatus.current !== selectedComponent){
-			changeActive(selectedComponent, navId);
+		if(prevStatus.current && prevStatus.current !== selectednav){
+			changeActive(selectednav, navId);
 		}
-		prevStatus.current = selectedComponent;
-	},[selectedComponent]);
+		prevStatus.current = selectednav;
+	},[selectednav]);
 
   return (
 		<div className="App">
@@ -45,13 +50,13 @@ function App() {
 						selectNav={selectNav}
 						navItems={navItems}
 						navId={navId}
-						default={selectedComponent}
+						default={selectednav}
 					/>
 				</div>
-				{selectedComponent === 'Home' && <Main/>}
-				{selectedComponent === 'Matches' && <Matches/>}
-				{selectedComponent === 'Contact' && <Contact/>}
-				<Footer selectMainComponent={setSelectedComponent} />
+				{selectednav === 'Home' && <Main/>}
+				{selectednav === 'Matches' && <Matches/>}
+				{selectednav === 'Contact' && <Contact/>}
+				<Footer selectMainComponent={setselectednav} />
 			</ErrorBoundary>
 		</div>
   );
