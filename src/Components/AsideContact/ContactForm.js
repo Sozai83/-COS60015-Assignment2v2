@@ -61,6 +61,7 @@ const ContactForm = (props) => {
   return (
     <form id="ContactForm" onSubmit={submitHandler}>
       <div id="Alert" className="Alert" data-testid="alert">
+        {(!emailValidation || !phoneValidation || missingMandatory.length > 0) &&
         <ul id="AlertList">
           {!emailValidation && (
             <li key="email">Please enter valid email adress.</li>
@@ -72,6 +73,7 @@ const ContactForm = (props) => {
             <li  key="mandatory">Please fill {missingMandatory}</li>
           )}
         </ul>
+        }
       </div>
       <p>Field with * is mandatory.</p>
       <label htmlFor="fname">First Name*: </label>

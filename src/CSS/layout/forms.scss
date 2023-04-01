@@ -60,11 +60,11 @@ form#ContactForm{
     .Alert{
         margin: 20px auto;
         width: 800px;     
-        color: $red;
 
-        .AlertList{
+        #AlertList{
             background-color: lightgray;
             padding: 20px;
+            color: $red;
         }
 
         li{
@@ -87,7 +87,7 @@ section#Subscription{
         width: 20%;
     }
 
-    #alert-sub{
+    #AlertListSub{
         color: $red;
     }
 

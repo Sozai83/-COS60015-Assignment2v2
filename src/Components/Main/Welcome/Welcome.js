@@ -1,5 +1,4 @@
 import React from 'react';
-import WelcomePhotoCredential from './WelcomePhotoCredential'
 import '../../../CSS/layout/welcome.scss'
 
 const Welcome = () => {
@@ -17,7 +16,7 @@ const Welcome = () => {
           </p>
         </article>
       </section>
-      <WelcomePhotoCredential />
+      <i className="Credit">Photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">CHUTTERSNAP</a> on <a href="https://unsplash.com/ja/%E5%86%99%E7%9C%9F/u5XMXzdcErI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></i>
     </React.Fragment>
   );
 };

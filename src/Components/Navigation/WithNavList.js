@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../../CSS/layout/navigation.scss';
 
 const withNavList = Component => {
-    const NewComponent = ({navItems, navId, selectNav, id, ...props})=>{
+    const NewComponent = ({navItems, navId, selectNav, ...props})=>{
         const [navList, setNavList] = useState(null);
        
         //Convert navItems to navList JSX
