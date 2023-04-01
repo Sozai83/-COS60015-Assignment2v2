@@ -36,7 +36,7 @@ const Footer = ({selectMainComponent}) => {
         </div>
         <div>
           <ul>
-            <li data-nav="Matches-Top">Game</li>
+            <li data-nav="Matches-Top">Matches</li>
           </ul>
         </div>
         <div>
