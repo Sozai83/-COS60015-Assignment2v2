@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import Header from "./Components/Header/Header";
-import Navigation from './Components/Navigation';
+import Navigation from './Components/Navigation/Navigation';
 import Main from "./Components/Main/Main";
 import Matches from "./Components/AsideMatches/Matches";
 import Contact from "./Components/AsideContact/Contact";

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../CSS/layout/navigation.scss';
+import '../../CSS/layout/navigation.scss';
 
 const withNavList = Component => {
     const NewComponent = ({navItems, navId, selectNav, id, ...props})=>{

@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
-import Navigation from "../Navigation";
+import Navigation from "../Navigation/Navigation";
 import Welcome from "./Welcome/Welcome";
 import Teams from "./Teams/Teams";
 import Rules from "./Rules/Rules";

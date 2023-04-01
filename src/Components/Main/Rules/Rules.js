@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
-import Navigation from "../../Navigation";
+import Navigation from "../../Navigation/Navigation";
 import RuleInfo from "./RuleInfo";
 import {selectEl, changeActive} from '../../../utils'
 import '../../../CSS/layout/learn-rugby.scss'
