@@ -4,9 +4,15 @@ import FooterBody from "./FooterBody/FooterBody"
 import '../../CSS/layout/footer.scss'
 
 const Footer = ({selectMainComponent}) => {
+	//Saves sunscriptionFormStatus with boolean value. If false, it is not submitted. If ture, it is submitted
 	const [subscriptionFormStatus, setSubscriptionFormStatus] = useState(false);
+	//Callback function to change subscription form staus
 	const onSubmit = () => setSubscriptionFormStatus(true);
+	//Call back function to show the subscription form again
 	const reappearingFrom = ()=> setSubscriptionFormStatus(false);
+	
+	//Renders subcription form and footer area
+	//Shows subscription form or thank you message depending on the subscrioption form status
     return (
 		<footer>
 			{subscriptionFormStatus === false && <Subscription onSubmit={onSubmit}/>}

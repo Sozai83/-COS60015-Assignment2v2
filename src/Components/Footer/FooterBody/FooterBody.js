@@ -3,6 +3,7 @@ import FooterMenu from "./FooterMenu";
 import FooterContact from "./FooterContact";
 
 const Footer = ({selectMainComponent}) => {
+  //Renders footer menu and footer contact details
     return (
 		<section id="Footer">
       <div className="Wrapper">

@@ -2,9 +2,12 @@ import React, {useState, useEffect} from "react";
 import '../../CSS/layout/forms.scss'
 
 const Subscription = ({onSubmit}) => {
+    //Saves email input value
     const [email, setEmail] = useState('');
+    //Saves email validation status - boolean
     const [emailValidation, setEmailValidation] = useState(false);
   
+    //when email value changes, it sets emailValidation
     useEffect(()=>{
     const regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
       if(email.length > 0){
@@ -14,15 +17,17 @@ const Subscription = ({onSubmit}) => {
       }
     }, [email, emailValidation]);
 
+    //Saves area input value
     const [area, setArea] = useState('any');
 
+    //Callback funtion to submit the form if all validation passes
     const submitHandler = (event)=>{
         event.preventDefault();
         if(emailValidation && email.length > 0 && area.length > 0){
             onSubmit();
         }
     }
-
+    //Returns subscription form
     return (
 		<div className="Wrapper">
                 <section id="Subscription">
