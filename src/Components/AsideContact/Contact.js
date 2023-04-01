@@ -3,7 +3,8 @@ import ContactForm from "./ContactFormContainer";
 import '../../CSS/layout/forms.scss'
 import {ErrorBoundary} from 'react-error-boundary'
 
-function ContactErrorFallbackComponent({error, resetErrorBoundary}) {
+//Error boundary to show when something goes wrong
+function ContactErrorFallbackComponent({error}) {
 	return (
 	  <div role="alert">
 		<p>Something went wrong with the Contact page:</p>
@@ -13,7 +14,8 @@ function ContactErrorFallbackComponent({error, resetErrorBoundary}) {
 	)
   }
 
-const Contact = (props) => {
+const Contact = () => {
+  //Returns contact section including contact details and the contact form
     return (
 		<aside id="Contact">
             <div className="Wrapper">

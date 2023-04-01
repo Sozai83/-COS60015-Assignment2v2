@@ -2,6 +2,7 @@ import React from 'react'
 import '../../CSS/layout/header.scss'
 
 const Header = () => {
+    //Renders header section
   return (
 		<header>
             <div className="Logo">

@@ -1,22 +1,26 @@
 import React, {useState, useEffect} from "react";
 
 const ContactForm = (props) => {
+  //Stores form input values
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState(''); 
-
+  //Stores form input values for email
   const [email, setEmail] = useState('');
   const [emailValidation, setEmailValidation] = useState(true);
 
+  //When email values change, it validates the email address
   useEffect(()=>{
     const regexEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     if(email.length > 0){
       setEmailValidation(regexEmail.test(email));
     }
   }, [email]);
-  
+
+    //Stores form input values for phone
   const [phone, setPhone] = useState('');
   const [phoneValidation, setPhoneValidation] = useState(true);
 
+    //When phone values change, it validates the phone
   useEffect(()=>{
     const regexPhone = /^\d{10}$/;
     if (phone.length > 0){
@@ -26,11 +30,14 @@ const ContactForm = (props) => {
     }
   }, [phone]);
 
+  //Stores form input values
   const [category, setCategory] = useState('otherGeneralQueries');
   const [message, setMessage] = useState('');
 
+//Set missing mandatory staus
   const [missingMandatory, setmissingMandatory] = useState('');
 
+  //Callback function to check each mandatory field is filled
   const checkMandatory = (event) => {  
     let tempMissingMandatory = '';
     if(fname.length <= 0){
@@ -51,6 +58,7 @@ const ContactForm = (props) => {
     setmissingMandatory(()=>tempMissingMandatory);
   }
 
+  //Function to only call props.handler when all the validation passes
   const submitHandler = (event) => {
     event.preventDefault();
     if(emailValidation && phoneValidation && missingMandatory <= 0){
@@ -58,6 +66,7 @@ const ContactForm = (props) => {
     } 
   }
 
+  //Renders contact form and error messages if any of the validations fail
   return (
     <form id="ContactForm" onSubmit={submitHandler}>
       <div id="Alert" className="Alert" data-testid="alert">

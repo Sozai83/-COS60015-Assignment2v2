@@ -2,7 +2,9 @@ import React from "react";
 
 const RulesInfo = (props) => {
     const ruleCardClass = "RuleCard "
+    //props.selected is pased from Rule component - decides which information to show 
     const selected = props.selected;
+    //Depending on the selected rule, it adds Hidden class to information to hide
     const beginnerClass = ruleCardClass + (selected !== 'BeginnerRules' ? 'Hidden' : '');
     const advanceClass = ruleCardClass + (selected !== 'AdvanceRules' ? 'Hidden' : '');
     const recentClass = ruleCardClass + (selected !== 'RecentChanges' ? 'Hidden' : '');
