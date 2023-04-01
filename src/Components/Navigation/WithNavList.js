@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../../CSS/layout/navigation.scss';
 
 const withNavList = Component => {
+    //Higher order component that used for Navigation components
     const NewComponent = ({navItems, navId, selectNav, ...props})=>{
         const [navList, setNavList] = useState(null);
        
@@ -24,6 +25,7 @@ const withNavList = Component => {
             setNavList(items);
         }, [navItems,props.default,selectNav]);
 
+        //pass the navList JSX and the navID to the Component
          return (
              <Component {...props} nav={{ items: navList, id: navId}}/>
          );      
