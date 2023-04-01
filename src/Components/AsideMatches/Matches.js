@@ -5,7 +5,8 @@ import {selectEl,changeActive} from '../../utils'
 import '../../CSS/layout/matches.scss'
 import {ErrorBoundary} from 'react-error-boundary'
 
-function MatchesErrorFallbackComponent({error, resetErrorBoundary}) {
+//Error boundary for this component when anything goes wrong
+function MatchesErrorFallbackComponent({error}) {
 	return (
 	  <div role="alert">
 		<p>Something went wrong with the Matches page:</p>
@@ -18,19 +19,22 @@ function MatchesErrorFallbackComponent({error, resetErrorBoundary}) {
 const AsideMatches = (props) => {
 	const ruleNavItems = ["2023", "2022", "2021"];
 	const navId = "MatchNav"
+	//Saves previously selected nav item
     let prevStatus = useRef(null);
-	const [selectedComponent, setSelectedComponent] = useState('2023');
+	//Saves selected nav item
+	const [selectedNav, setSelectedNav] = useState('2023');
+	//Callback function to set selected nav item
 	const selectNav = (event) => {
-		selectEl(event, setSelectedComponent, '2023');
+		selectEl(event, setSelectedNav, '2023');
 	};
-
+	//Changes active nav item when the selected nav item changes
 	useEffect(()=>{
-		if(prevStatus.current && prevStatus.current !== selectedComponent){
-			changeActive(selectedComponent, navId);
+		if(prevStatus.current && prevStatus.current !== selectedNav){
+			changeActive(selectedNav, navId);
 		}
-		prevStatus.current = selectedComponent;
-	},[selectedComponent]);
-	
+		prevStatus.current = selectedNav;
+	},[selectedNav]);
+	//Return Navigtation for the matches and selected matches information
     return (
 		<aside id="Matches">
             <div className="Wrapper">
@@ -41,8 +45,8 @@ const AsideMatches = (props) => {
 						navItems={ruleNavItems}
 						navId={navId}
 						selectNav={selectNav} 
-						default={selectedComponent}/>
-					<MatchInfo selected={selectedComponent}/>
+						default={selectedNav}/>
+					<MatchInfo selected={selectedNav}/>
 				</ErrorBoundary>
 			</div>
 		</aside>

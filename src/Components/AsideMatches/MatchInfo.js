@@ -2,6 +2,7 @@ import React from 'react'
 
 const GameInfo = (props) => {
     const selected = props.selected;
+    //Returns selected matches information
   return (
     <React.Fragment>
 	  	{selected === "2023" && 
