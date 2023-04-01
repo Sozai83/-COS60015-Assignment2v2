@@ -46,7 +46,6 @@ function App() {
 						navItems={navItems}
 						navId={navId}
 						default={selectedComponent}
-						id = {true}
 					/>
 				</div>
 				{selectedComponent === 'Home' && <Main/>}

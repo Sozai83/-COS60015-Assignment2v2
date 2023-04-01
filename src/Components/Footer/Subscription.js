@@ -28,8 +28,8 @@ const Subscription = ({onSubmit}) => {
                 <section id="Subscription">
                     <h2>Subscribe to news letters</h2>
                     <form id="SubscribeForm"  onSubmit={submitHandler}>
-                        { (!emailValidation || email.length <= 0 || area.length <= 0) && (
-                            <div id ="AlertSub" className="Alert">
+                            <div id ="AlertSub" className="Alert" data-testid="alert">
+                            {(!emailValidation || email.length <= 0 || area.length <= 0) && (
                             <ul id="AlertListSub">
                                 {!emailValidation && (
                                     <li key="subEmail">Please enter valid email adress.</li>
@@ -41,13 +41,13 @@ const Subscription = ({onSubmit}) => {
                                     <li key="subArea">Please select area.</li>
                                 )}
                             </ul>
+                            )}
                         </div>
-                        )}
-                        
                         <label htmlFor="subemail">Email (mandatory): </label>
                         <input type="email"
                             id="submail"
                             name="subemail"
+                            data-testid="email"
                             aria-label="submail"
                             placeholder="abc@braveblossoms.com.au"
                             onChange={(event)=>setEmail(event.target.value)}
@@ -67,7 +67,7 @@ const Subscription = ({onSubmit}) => {
                             <option type="checkbox" value="kyushu" aria-label="kyushu">Kyushu</option>
                             <option type="checkbox" value="okinawa" aria-label="Okinawa">Okinawa</option>
                         </select>
-                        <input type="submit" id="SubscribeSubmit" value="Follow Brave Blossoms!" aria-label="submit"/>
+                        <input type="submit" id="SubscribeSubmit" value="Follow Brave Blossoms!" aria-label="submit" data-testid="submit"/>
                     </form>
                 </section>
             </div>
