@@ -2,10 +2,12 @@ import React from "react";
 import memberData from "./TeamsData";
 
 const TeamMemberCards = ({ids,openMemberDetails}) => {
+    // Pulls member data from memberData file
     const grabMemberDetails = (event)=>{
         event.preventDefault();
         openMemberDetails(event.target.closest('figure').dataset.member);
     }
+    // Map the array contains member IDs to array of member card JSX
     const members = ids.map( id =>  {
         const member = memberData[id];
         return(
@@ -17,7 +19,8 @@ const TeamMemberCards = ({ids,openMemberDetails}) => {
             </figcaption>
         </figure>)
         })
-
+    
+    //Returns team member cards in a div
     return (
         <div id="TeamMembers">
             {members}

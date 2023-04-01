@@ -3,14 +3,18 @@ import memberData from "./TeamsData";
 import '../../../CSS/layout/team-details.scss'
 
 const TeamMemberDetails = ({toggleDetailStatus, ...props}) => {
+  // Pulls member data from memberData file
     const member = memberData[props.member];
+    //Convert string with <br> to paragraphs
     const memberBio = member.bio.split('<br>').map(sentence => <p>{sentence}</p>);
+    //Callback function to hide team details
     const hideDetails = (event)=>{
         if(event.target.className === 'Overlay' || event.target.className === 'Close'){
             event.preventDefault();
             toggleDetailStatus();
         }       
     }
+  //Renders team member details
   return (
     <div className='Overlay' onClick={hideDetails}>
       <section id="TeamDetails">

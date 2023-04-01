@@ -6,7 +6,8 @@ import TeamMemberCards from "./TeamMemberCard";
 import Slider from "react-slick";
 import {ErrorBoundary} from 'react-error-boundary'
 
-function TeamMemberCardFallbackComponent({error, resetErrorBoundary}) {
+//Error boundary when something goes wrong with this section
+function TeamMemberCardFallbackComponent({error}) {
   return (
     <div role="alert">
       <p>Something went wrong when retrieving team member's cards:</p>
@@ -17,6 +18,7 @@ function TeamMemberCardFallbackComponent({error, resetErrorBoundary}) {
 }
 
 const TeamMembers = ({openMemberDetails, ...props}) => {
+    // setting for carousel - react-slick
     const settings = {
         dots: true,
         infinite: true,
@@ -24,6 +26,7 @@ const TeamMembers = ({openMemberDetails, ...props}) => {
         slidesToShow: 1,
         slidesToScroll: 1
       };
+    //Returns team member carousel
   return (
     <ErrorBoundary 
         FallbackComponent={TeamMemberCardFallbackComponent}

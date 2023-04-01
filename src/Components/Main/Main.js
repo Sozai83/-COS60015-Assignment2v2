@@ -6,7 +6,8 @@ import Rules from "./Rules/Rules";
 import {scrollToEl, changeActive} from '../../utils'
 import {ErrorBoundary} from 'react-error-boundary'
 
-function MainErrorFallbackComponent({error, resetErrorBoundary}) {
+//Error boundary to appear when something goes wrong
+function MainErrorFallbackComponent({error}) {
 	return (
 	  <div role="alert">
 		<p>Something went wrong with the Main page:</p>
@@ -19,17 +20,23 @@ function MainErrorFallbackComponent({error, resetErrorBoundary}) {
 const Main = (props) => {
 	const mainNav = ['Welcome', 'Teams', 'Learn Rugby'];
 	const navId = "SecondNav"
+	// Saves previously selected navigation item
 	const prevStatus = useRef(null)
-	const [selectedComponent, setSelectedComponent] = useState('Welcome');
+	// Saves  selected navigation item
+	const [selectedNav, setselectedNav] = useState('Welcome');
+	//Callback function to set the selectedNav status
 	const selectnav = (event) => {
-		scrollToEl(event, setSelectedComponent);
+		scrollToEl(event, setselectedNav);
 	};
+	//Change active item when the selectedNav status changes
 	useEffect(()=>{
-		if(prevStatus.current && prevStatus.current !== selectedComponent){
-			changeActive(selectedComponent, navId);
+		if(prevStatus.current && prevStatus.current !== selectedNav){
+			changeActive(selectedNav, navId);
 		}
-		prevStatus.current = selectedComponent;
-	},[selectedComponent]);
+		prevStatus.current = selectedNav;
+	},[selectedNav]);
+
+	//Render navigation bar and selected component ("Welcome", "Teams" and "Learn Rugby")
     return (
 		<main id="Home">
 			<div className="Wrapper">
@@ -40,7 +47,7 @@ const Main = (props) => {
 						navItems={mainNav}
 						navId= {navId}
 						selectNav={selectnav}
-						default={selectedComponent} 
+						default={selectedNav} 
 					/>
 					<Welcome />
 					<Teams />

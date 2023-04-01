@@ -1,6 +1,7 @@
 import React from "react";
 
 const AboutTeams = () => {
+// Renders about teams section
   return (
     <div>
         <h2>Teams</h2>
