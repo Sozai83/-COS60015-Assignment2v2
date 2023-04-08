@@ -78,19 +78,42 @@ section#Subscription{
     padding: 20px 40px;
     margin-bottom: 20px;
 
-    input{
-        width: 28%;
-        margin-right: 20px;
+    form{
+        display: flex;
+        flex-wrap: wrap;
+
+        .Alert{
+            width: 100%;
+        }
+
+        .SubemailWrapper{
+            width: 60%;
+            label{
+                width: 220px;
+            }
+            input{
+                width: calc(100% - 240px);
+                margin-right: 20px;
+            }
+        }
+
+        .AreaWrapper{
+            width: 40%;
+
+            label{
+                width: 100px;
+            }
+            select{
+                width: calc(100% - 100px);
+            }
+        }
+    
+        #AlertListSub{
+            color: $red;
+        }
     }
 
-    select{
-        width: 20%;
-    }
-
-    #AlertListSub{
-        color: $red;
-    }
-
+    #SubscribeSubmit,
     button{
         padding: 10px;
         margin: 10px 0;
@@ -101,6 +124,10 @@ section#Subscription{
             cursor: pointer;
             background-color: $brave-pink;
         }
+    }
+
+    #SubscribeSubmit{
+        float: right;
     }
 }
   

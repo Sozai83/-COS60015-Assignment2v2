@@ -16,6 +16,6 @@ section#Welcome{
     article{
         background: $mild-white;
         padding: 20px;
-        width: 800px;
+        width: calc(100% - 40px);
     }
 }

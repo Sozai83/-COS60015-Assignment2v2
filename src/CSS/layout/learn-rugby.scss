@@ -6,6 +6,10 @@ section#LearnRugby{
             display:flex;
             padding: 20px 0;
 
+            @media only screen and (max-width: 1200px) {
+                flex-direction: column-reverse;
+            }
+
             div{
                 align-self: center;
                 width: 100%;
@@ -15,6 +19,11 @@ section#LearnRugby{
             figure{
                 align-self: center;
                 width: 80%;
+
+                @media only screen and (max-width: 1200px) {
+                    margin-bottom: 20px;
+                }
+
               }
         }
     }

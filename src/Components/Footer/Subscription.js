@@ -48,30 +48,34 @@ const Subscription = ({onSubmit}) => {
                             </ul>
                             )}
                         </div>
-                        <label htmlFor="subemail">Email (mandatory): </label>
-                        <input type="email"
-                            id="submail"
-                            name="subemail"
-                            data-testid="email"
-                            aria-label="submail"
-                            placeholder="abc@braveblossoms.com.au"
-                            onChange={(event)=>setEmail(event.target.value)}
-                            required/>
-                        <label htmlFor="area" className="Dropdown">Areas: </label>
-                        <select
-                            name="area"
-                            defaultValue="any"
-                            onChange={(event)=>setArea(event.target.value)}>
-                            <option type="checkbox" value="any" aria-label="any">Any</option>
-                            <option type="checkbox" value="hokkaido" aria-label="hokkaido">Hokkaido</option>
-                            <option type="checkbox" value="tohoku" aria-label="tohoku">Tohoku</option>
-                            <option type="checkbox" value="tohoku" aria-label="kanto">Kanto</option>
-                            <option type="checkbox" value="tokai" aria-label="tokai">Tokai</option>
-                            <option type="checkbox" value="kansai" aria-label="kansai">Kansai</option>
-                            <option type="checkbox" value="shikoku" aria-label="shikoku">Shikoku</option>
-                            <option type="checkbox" value="kyushu" aria-label="kyushu">Kyushu</option>
-                            <option type="checkbox" value="okinawa" aria-label="Okinawa">Okinawa</option>
-                        </select>
+                        <div className="SubemailWrapper">
+                            <label htmlFor="subemail">Email (mandatory): </label>
+                            <input type="email"
+                                id="submail"
+                                name="subemail"
+                                data-testid="email"
+                                aria-label="submail"
+                                placeholder="abc@braveblossoms.com.au"
+                                onChange={(event)=>setEmail(event.target.value)}
+                                required/>
+                        </div>
+                        <div className="AreaWrapper">
+                            <label htmlFor="area" className="Dropdown">Areas: </label>
+                            <select
+                                name="area"
+                                defaultValue="any"
+                                onChange={(event)=>setArea(event.target.value)}>
+                                <option type="checkbox" value="any" aria-label="any">Any</option>
+                                <option type="checkbox" value="hokkaido" aria-label="hokkaido">Hokkaido</option>
+                                <option type="checkbox" value="tohoku" aria-label="tohoku">Tohoku</option>
+                                <option type="checkbox" value="tohoku" aria-label="kanto">Kanto</option>
+                                <option type="checkbox" value="tokai" aria-label="tokai">Tokai</option>
+                                <option type="checkbox" value="kansai" aria-label="kansai">Kansai</option>
+                                <option type="checkbox" value="shikoku" aria-label="shikoku">Shikoku</option>
+                                <option type="checkbox" value="kyushu" aria-label="kyushu">Kyushu</option>
+                                <option type="checkbox" value="okinawa" aria-label="Okinawa">Okinawa</option>
+                            </select>
+                        </div>
                         <input type="submit" id="SubscribeSubmit" value="Follow Brave Blossoms!" aria-label="submit" data-testid="submit"/>
                     </form>
                 </section>
