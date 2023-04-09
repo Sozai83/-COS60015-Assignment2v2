@@ -261,9 +261,15 @@ section#Subscription{
             label{
                 width: 160px;
                 display: inline-block;
+                @media only screen and (max-width: 480px) {
+                    width: 100%;
+                }
             }
             input{
                 width: calc(100% - 200px);
+                @media only screen and (max-width: 480px) {
+                    width: 100%;
+                }
             }   
         }
 
@@ -284,10 +290,17 @@ section#Subscription{
                 @media only screen and (max-width: 800px) {
                     width: 160px;
                 }
+                @media only screen and (max-width: 480px) {
+                    width: 100%;
+                }
             }
             select{
                 width: calc(100% - 100px);
                 max-width: 200px;
+                @media only screen and (max-width: 480px) {
+                    width: 100%;
+                    max-width: 480px;
+                }
             }
         }
     
