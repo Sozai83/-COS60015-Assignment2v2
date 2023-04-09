@@ -10,28 +10,89 @@ section.MatchCard{
     height: 100%;
     margin: 0 auto;
 
+    @media only screen and (max-width: 1000px) {
+        font-size: 22px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 20px;
+        display: block;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 18px;
+    }
+
     table,
     .Highlight,
     .Map{
         width: 50%;
         margin: 0 auto;
+
+        @media only screen and (max-width: 768px) {
+            width: 80%;
+            max-width: 768px;
+        }
     }
 
     .Highlight{
         max-width: 400px;
         font-size: 20px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 16px;
+        }
+
+        iframe,
         img{
             width: 100%;
-            max-width: 400px;
+            max-width: 400px; 
+            margin-top: 10px;
+
+            @media only screen and (max-width: 1000px) {
+                width: 360px;
+                height: 260px;
+            }
+
+            @media only screen and (max-width: 768px) {
+                width: 320px;
+                height: 240px;
+            }
         }
     }
 
     .Map{
         font-size: 16px;
         max-width: 400px;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 768px) {
+            margin-top: 20px;
+        }
+
+        .GmapCanvas{
+            text-align: center;
+        }
+
         iframe{
             width: 100%;
-            max-width: 400px;
+            max-width: 400px; 
+            margin-top: 10px;
+
+            @media only screen and (max-width: 1000px) {
+                width: 360px;
+                height: 260px;
+            }
+
+            @media only screen and (max-width: 768px) {
+                width: 320px;
+                height: 240px;
+            }
         }
 
         address{
@@ -58,6 +119,14 @@ section.MatchCard{
 
             &.MatchTitle{
                 height: 120px;
+
+                @media only screen and (max-width: 1000px) {
+                    height: 100px;
+                }
+
+                @media only screen and (max-width: 768px) {
+                    height: 60px;
+                }
             }
 
             &.Match{
@@ -65,17 +134,31 @@ section.MatchCard{
             }
 
             &.MatchTeams{
-                width: 80px;
+                width: 90%;
                 height: 80px;
 
                 img.Team{
                     width: 80px;
                     height: 80px;
+                    align-self: center;
+
+                    @media only screen and (max-width: 1000px) {
+                        width: 40px;
+                        height: 40px;
+                    }
+        
+                    @media only screen and (max-width: 768px) {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
 
                 td{
                     display: flex;
                     justify-content: center;
+                    vertical-align: middle;
+                    height: 80px;
+                    padding: 0 10px;
     
                     .Teams{
                         padding: 0 10px;
@@ -84,22 +167,6 @@ section.MatchCard{
                       
                 }
             } 
-        }
-    }
-}
-
-section.MatchCard{
-
-    table{
-        .match_title{
-            th{
-                padding-bottom: 10px;
-            }    
-        }
-
-        .Result td{
-            height: 42px;
-            font-size: 42px;
         }
     }
 
@@ -126,6 +193,4 @@ section.MatchCard{
             background-color: $mild-white;
         }
     }
-} 
-
-  
+}
