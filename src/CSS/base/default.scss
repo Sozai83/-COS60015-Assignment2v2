@@ -17,6 +17,11 @@
     line-height: 20px;
     background-color: $mild-white;
     color: $mild-black;
+
+    @media only screen and (max-width: 800px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
   
   ul{

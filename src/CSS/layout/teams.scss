@@ -4,7 +4,6 @@ section#Teams{
     margin: 0 auto;
     padding-bottom: 20px;
 
-    div#TeamMembers,
     figure#News,
     .Details,
     .Match_card{
@@ -30,6 +29,10 @@ section#Teams{
         button{
             &.slick-prev {
                 left: -40px;
+            }
+
+            &.slick-next {
+                right: -20px;
             }
 
             &.slick-arrow:before{
@@ -66,13 +69,41 @@ section#Teams{
         }
     }
     #TeamMembers{
-        width: 1200px;
-        height: 200px;
+        width: 1080px;
+        height: 220px;
+        margin: 0 auto;
         opacity: 1;
+
+        @media only screen and (max-width:1200px) {
+            width: 720px;
+        }
+
+        @media only screen and (max-width:960px) {
+            width: 540px;
+        }
+
+        @media only screen and (max-width:700px) {
+            width: 360px;
+            height: 260px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            width: 180px;
+            height: 260px;
+        }
 
         &::-webkit-scrollbar{
             width: 0;
             display: none;
+        }
+
+        .slick-list{
+            width: 100%;
+        }
+
+        .slick-slide{
+            width: 180px !important;
+            margin: 0 auto;
         }
 
         figure{
@@ -80,7 +111,7 @@ section#Teams{
             flex-direction: column;
             justify-content: space-evenly;
             width: 160px;
-            padding: 0 12px;
+            margin-bottom: 20px;
 
             img{
                 display: block;

@@ -87,29 +87,61 @@ section#Subscription{
         }
 
         .SubemailWrapper{
-            width: 60%;
+            width: 50%;
+            @media only screen and (max-width: 1200px) {
+                width: 60%;
+            }
+
+            @media only screen and (max-width: 800px) {
+                width: 100%;
+            }
+
             label{
-                width: 220px;
+                width: 160px;
+                display: inline-block;
             }
             input{
-                width: calc(100% - 240px);
-                margin-right: 20px;
-            }
+                width: calc(100% - 200px);
+            }   
         }
 
         .AreaWrapper{
-            width: 40%;
+            width: 30%;
+
+            @media only screen and (max-width: 1200px) {
+                width: 40%;
+            }
+
+            @media only screen and (max-width: 800px) {
+                width: 100%;
+            }
 
             label{
                 width: 100px;
+                display: inline-block;
+                @media only screen and (max-width: 800px) {
+                    width: 160px;
+                }
             }
             select{
                 width: calc(100% - 100px);
+                max-width: 200px;
             }
         }
     
         #AlertListSub{
             color: $red;
+        }
+    }
+
+    .SubmitWrapper{
+        width: 20%;
+        text-align: right;
+        @media only screen and (max-width: 1200px) {
+            width: 100%;
+        }
+        @media only screen and (max-width: 800px) {
+            text-align: left;
         }
     }
 
@@ -124,10 +156,9 @@ section#Subscription{
             cursor: pointer;
             background-color: $brave-pink;
         }
-    }
-
-    #SubscribeSubmit{
-        float: right;
+        @media only screen and (max-width: 800px) {
+            float: none;
+        }
     }
 }
   

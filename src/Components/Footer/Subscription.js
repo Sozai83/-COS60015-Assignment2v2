@@ -76,7 +76,9 @@ const Subscription = ({onSubmit}) => {
                                 <option type="checkbox" value="okinawa" aria-label="Okinawa">Okinawa</option>
                             </select>
                         </div>
-                        <input type="submit" id="SubscribeSubmit" value="Follow Brave Blossoms!" aria-label="submit" data-testid="submit"/>
+                        <div class="SubmitWrapper">
+                            <input type="submit" id="SubscribeSubmit" value="Follow Brave Blossoms!" aria-label="submit" data-testid="submit"/>
+                        </div>
                     </form>
                 </section>
             </div>
