@@ -39,6 +39,7 @@ function App() {
 		prevStatus.current = selectednav;
 	},[selectednav]);
 
+	//Render navigation bar and selected component ("Home", "Matches" and "Contact")
   return (
 		<div className="App">
 			<ErrorBoundary 

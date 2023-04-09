@@ -11,6 +11,15 @@ section#Welcome{
         color: $mild-white;
         background: $mild-black-transparent;
         line-height: 2em;
+
+        @media only screen and (max-width: 800px) {
+            font-size: 2em;
+        }
+
+        @media only screen and (max-width: 640px) {
+            line-height: 1.6em;
+        }
+
     }
 
     article{

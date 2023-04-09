@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../CSS/layout/welcome.scss'
 
 const Welcome = () => {
- 
+ // Renders welcome section to user
   return (
     <React.Fragment>
       <section id="Welcome">

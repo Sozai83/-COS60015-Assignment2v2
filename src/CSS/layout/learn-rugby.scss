@@ -26,5 +26,22 @@ section#LearnRugby{
 
               }
         }
+
+        iframe{
+            width: 480px;
+            height: 270px;
+            @media only screen and (max-width: 800px) {
+                width: 400px;
+                height: 220px;
+            }
+            @media only screen and (max-width: 600px) {
+                width: 300px;
+                height: 160px;
+            }
+            @media only screen and (max-width: 320px) {
+                width: 200px;
+                height: 110px;
+            }
+        }
     }
 } 

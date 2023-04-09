@@ -8,6 +8,10 @@ section#Footer{
         display: flex;
         justify-content: space-between;
         margin: 20px auto;
+
+        @media only screen and (max-width:800px) {
+            display: block;
+        }
     }
 
     a:hover{
@@ -28,6 +32,12 @@ section#Footer{
                 cursor: pointer;
                 color:$mild-white;
             }
+        }
+    }
+
+    #FooterContact{
+        @media only screen and (max-width:800px) {
+            padding-top: 40px;
         }
     }
 
