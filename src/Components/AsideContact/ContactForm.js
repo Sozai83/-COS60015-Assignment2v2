@@ -84,102 +84,118 @@ const ContactForm = (props) => {
         </ul>
         }
       </div>
-      <p>Field with * is mandatory.</p>
-      <label htmlFor="fname">First Name*: </label>
-      <input
-        id="fname"
-        name="fname"
-        data-testid="fname"
-        aria-label="fname"
-        type="text"
-        placeholder="First name"
-        onChange={(event)=>setFname(event.target.value)}
-      />
+      <p className="MandatoryFieldNote">Field with * is mandatory.</p>
+      <div className="HalfWrapper">
+        <label htmlFor="fname">First Name*: </label>
+        <input
+          id="fname"
+          name="fname"
+          data-testid="fname"
+          aria-label="fname"
+          type="text"
+          placeholder="First name"
+          onChange={(event)=>setFname(event.target.value)}
+        />
+      </div>
+      <div className="HalfWrapper">
       <label htmlFor="lname">Last Name*: </label>
-      <input
-        id="lname"
-        name="lname"
-        data-testid="lname"
-        aria-label="lname"
-        type="text"
-        placeholder="Last name"
-        onChange={ (event)=>setLname(event.target.value)}
-      />
-      <label htmlFor="email">Email*: </label>
-      <input
-        id="email"
-        name="email"
-        data-testid="email"
-        aria-label="contact-email"
-        type="contact-email"
-        placeholder="abc@braveblossom.com"
-        onChange={ (event)=> setEmail(event.target.value)}
-      />
-      <label htmlFor="phone">Phone: </label>
-      <input id="phone"
-      name="phone"
-      data-testid="phone"
-      aria-label="phone"
-      type="phone"
-      placeholder="0123456789"
-      onChange={ (event)=> setPhone(event.target.value)}
-      />
-      <label htmlFor="category" className="left">
-        Category*:
-      </label>
-      <select
-        name="category"
-        defaultValue="otherGeneralQueries"
-        onChange={(event)=> setCategory(event.target.value)}
-      >
-        <option
-          type="checkbox"
-          value="supportTeam"
-          aria-label="checkbox_team">
-          Support Team
-        </option>
-        <option
-          type="checkbox"
-          value="aboutGame"
-          aria-label="checkbox_game">
-          About Game
-        </option>
-        <option
-          type="checkbox"
-          value="feedback"
-          aria-label="checkbox_team">
-          Feedback
-        </option>
-        <option
-          type="checkbox"
-          value="otherGeneralQueries"
-          aria-label="checkbox_team"
+        <input
+          id="lname"
+          name="lname"
+          data-testid="lname"
+          aria-label="lname"
+          type="text"
+          placeholder="Last name"
+          onChange={ (event)=>setLname(event.target.value)}
+        />
+      </div>
+      <div className="HalfWrapper">
+        <label htmlFor="email">Email*: </label>
+        <input
+          id="email"
+          name="email"
+          data-testid="email"
+          aria-label="contact-email"
+          type="contact-email"
+          placeholder="abc@braveblossom.com"
+          onChange={ (event)=> setEmail(event.target.value)}
+        />
+      </div>
+      <div className="HalfWrapper">
+        <label htmlFor="phone">Phone: </label>
+        <input id="phone"
+        name="phone"
+        data-testid="phone"
+        aria-label="phone"
+        type="phone"
+        placeholder="0123456789"
+        onChange={ (event)=> setPhone(event.target.value)}
+        />
+      </div>
+      <div className="FullWrapper">
+        <label htmlFor="category" className="left">
+          Category*:
+        </label>
+        <select
+          name="category"
+          defaultValue="otherGeneralQueries"
+          onChange={(event)=> setCategory(event.target.value)}
         >
-          Other General Queries
-        </option>
-      </select>
-      <label htmlFor="query" className="left">
-        Description*:
-      </label>
-      <textarea
-        id="query"
-        name="query"
-        data-testid="query"
-        aria-label="query"
-        type="text"
-        onChange={ (event)=> setMessage(event.target.value)}
-      ></textarea>
-      <label htmlFor="file" className="left">
-        Select a file:
-      </label>
-      <input type="file" id="file" name="file" />
-      <input
-        type="submit"
-        id="contact-submit"
-        value="Send Message"
-        aria-label="submit"
-        onClick={checkMandatory}
-      />
+          <option
+            type="checkbox"
+            value="supportTeam"
+            aria-label="checkbox_team">
+            Support Team
+          </option>
+          <option
+            type="checkbox"
+            value="aboutGame"
+            aria-label="checkbox_game">
+            About Game
+          </option>
+          <option
+            type="checkbox"
+            value="feedback"
+            aria-label="checkbox_team">
+            Feedback
+          </option>
+          <option
+            type="checkbox"
+            value="otherGeneralQueries"
+            aria-label="checkbox_team"
+          >
+            Other General Queries
+          </option>
+        </select>
+      </div>
+      <div className="FullWrapper">
+        <label htmlFor="query" className="left">
+          Description*:
+        </label>
+        <textarea
+          id="query"
+          name="query"
+          data-testid="query"
+          aria-label="query"
+          type="text"
+          onChange={ (event)=> setMessage(event.target.value)}
+        ></textarea>
+      </div> 
+      <div className="FileWrapper">
+        <label htmlFor="file" className="left">
+          Select a file:
+        </label>
+        <input type="file" id="file" name="file" />
+      </div>
+      <div className="SubmitWrapper">
+        <input
+          type="submit"
+          id="contact-submit"
+          value="Send Message"
+          aria-label="submit"
+          onClick={checkMandatory}
+        />
+      </div>
     </form>
   );
 };

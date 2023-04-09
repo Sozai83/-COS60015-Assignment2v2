@@ -1,6 +1,11 @@
 @import '../base/default.scss';
 
 aside#Contact{
+    @media only screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
     header{
         height: 30vh;
         background:url(../../../public/img/contact.jpg);
@@ -8,12 +13,42 @@ aside#Contact{
         background-size: cover;
         position: relative;
 
+        @media only screen and (max-width: 1260px) {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 1080px) {
+            width: 800px;
+        }
+
+        @media only screen and (max-width: 960px) {
+            width: 700px;
+        }
+
+        @media only screen and (max-width: 880px) {
+            width: 580px;
+        }
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+
         h1{
             color: #fff;
             padding: 40px 100px;
             background: $mild-black-transparent;
             position: absolute;
             bottom: 0;
+
+            @media only screen and (max-width: 768px) {
+                padding: 40px;
+                font-size: 34px;
+            }
+
+            @media only screen and (max-width: 480px) {
+                font-size: 28px;
+            }
+            
         }
     }
 
@@ -24,14 +59,60 @@ aside#Contact{
             background-color: $brave-pink;
             text-align: center;
             padding-top: 20px;
+
+            @media only screen and (max-width: 1260px) {
+                width: 1000px;
+                margin: 0 auto;
+            }
+
+            @media only screen and (max-width: 1080px) {
+                width: 800px;
+            }
+
+            @media only screen and (max-width: 960px) {
+                width: 700px;
+            }
+
+            @media only screen and (max-width: 880px) {
+                width: 580px;
+            }
+
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+            }
         }
 
         .ContactPoint{
             margin: 0 auto;
             background-color: $mild-white;
-            border-left: 590px solid transparent;
-            border-right: 590px solid transparent;
+            border-left: 600px solid transparent;
+            border-right: 600px solid transparent;
             border-top: 100px solid $brave-pink;
+
+            @media only screen and (max-width: 1260px) {
+                border-left: 500px solid transparent;
+                border-right: 500px solid transparent;
+                width: 0px;
+            }
+
+            @media only screen and (max-width: 1080px) {
+                border-left: 400px solid transparent;
+                border-right: 400px solid transparent;
+            }
+
+            @media only screen and (max-width: 960px) {
+                border-left: 350px solid transparent;
+                border-right: 350px solid transparent;
+            }
+
+            @media only screen and (max-width: 880px) {
+                border-left: 290px solid transparent;
+                border-right: 290px solid transparent;
+            }
+
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
         }
 
     }
@@ -44,7 +125,13 @@ aside#Contact{
   
 
 form#ContactForm{
+    display: flex;
+    flex-wrap: wrap;
     margin: 40px auto;
+
+    .MandatoryFieldNote{
+        width: 100%;
+    }
 
     label{
         width: 100px;
@@ -52,14 +139,84 @@ form#ContactForm{
         text-align: right;
         margin-right: 10px;
 
+        @media only screen and (max-width: 480px) {
+            width: 100%;
+            text-align: left;
+            margin-right: 0px;
+        }
+
         &.Left{
             text-align: left;
         }
     }
 
+    .HalfWrapper{
+        width: 50%;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        input{
+            width: calc(100% - 140px);
+
+            @media only screen and (max-width: 480px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .FullWrapper{
+        width: 100%;
+
+        textarea,
+        select{
+            width: 100%;
+        }
+    }
+
+    .FileWrapper,
+    .SubmitWrapper{
+        width: 50%;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        input{
+            width: calc(100% - 140px);
+
+            @media only screen and (max-width: 480px) {
+                width: 100%;
+            }
+        }
+
+        #contact-submit{
+            max-width: 100%;
+            width: 160px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: $brave-pink-transparent;
+            border: 1px $brave-pink solid;
+            border-radius: 5px;
+            &:hover{
+                cursor: pointer;
+                background-color: $brave-pink;
+            }
+            @media only screen and (max-width: 800px) {
+                float: none;
+            }
+        }
+
+    }
+
     .Alert{
         margin: 20px auto;
-        width: 800px;     
+        width: 800px; 
+        
+        @media only screen and (max-width: 880px) {
+            width: 100%; 
+        }
 
         #AlertList{
             background-color: lightgray;
@@ -77,6 +234,11 @@ form#ContactForm{
 section#Subscription{
     padding: 20px 40px;
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+    }
 
     form{
         display: flex;
