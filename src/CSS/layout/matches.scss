@@ -63,6 +63,12 @@ section.MatchCard{
                 width: 320px;
                 height: 240px;
             }
+
+            @media only screen and (max-width: 480px) {
+                width: 260px;
+                height: 180px;
+            }
+            
         }
     }
 
@@ -92,6 +98,10 @@ section.MatchCard{
             @media only screen and (max-width: 768px) {
                 width: 320px;
                 height: 240px;
+            }
+            @media only screen and (max-width: 480px) {
+                width: 260px;
+                height: 180px;
             }
         }
 
